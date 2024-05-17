@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .wrapper {
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+            justify-content: space-around;
+            margin: 10px 0px;
+        }
+
+        .bor {
+            display: inline-block;  
+            background-color: #2563eb;
+            border: 1px solid black;
+            border-radius: 8px;
+        }
+
+        #inpt{
+            height: 60px;
+            width: 300px;
+            border-radius: 8px;
+            border-bottom: 3px solid #2563eb;
+            margin: 20px 20px;
+            text-align: right;
+            font-size: xx-large;
+            /* float: right; */
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin:6% auto;
+           
+            
+        }
+        .btn{
+            height: 3rem;
+            width: 3rem;
+            border: 2px solid ;
+            border-radius: 50%;
+            font-size: large;
+            cursor: pointer;
+        }
+        .allClear{
+            background-color: #ef4444;
+            color: white;
+        }
+        .ans{
+            background-color: #22c55e;
+            color: white;
+        }
+    </style>
+    <div class="container">
+        <div class="bor">
+            <input id="inpt" readonly>
+            <br>
+    
+            <span class="wrapper">
+                <button value="AC" class="btn allClear"  onclick="num.value=' '">AC</button>
+                <button value="()" class="btn"  onclick="num.value+='()'">()</button>
+                <button value="%"  class="btn" onclick="num.value+='%'">%</button>
+                <button value="/"  class="btn" onclick="num.value+='/'">/</button>
+            </span>
+            <br>
+            <span class="wrapper">
+                <button value="7"  class="btn" onclick="num.value+='7'">7</button>
+                <button value="8"  class="btn" onclick="num.value+='8'">8</button>
+                <button value="9"  class="btn" onclick="num.value+='9'">9</button>
+                <button value="*"  class="btn" onclick="num.value+='*'">x</button>
+            </span>
+            <br>
+            <span class="wrapper">
+                <button value="4"  class="btn" onclick="num.value+='4'">4</button>
+                <button value="5"  class="btn" onclick="num.value+='5'">5</button>
+                <button value="6"  class="btn" onclick="num.value+='6'">6</button>
+                <button value="-"  class="btn" onclick="num.value+='-'">-</button>
+            </span>
+            <br>
+            <span class="wrapper">
+                <button value="1"  class="btn" onclick="num.value+='1'">1</button>
+                <button value="2"  class="btn" onclick="num.value+='2'">2</button>
+                <button value="3"  class="btn" onclick="num.value+='3'">3</button>
+                <button value="+"  class="btn" onclick="num.value+='+'">+</button>
+            </span>
+            <br>
+            <span class="wrapper">
+                <button value="0" class="btn" onclick="num.value+='0'">0</button>
+                <button value="." class="btn" onclick="num.value+='.'">.</button>
+                <button value="C" class="btn" onclick="num.value=num.value.slice(0,-1)">C</button>
+                <button value="=" class="btn ans" onclick="num.value=eval(num.value)">=</button>
+            </span>
+        </div>
+    </div>
+    
+    <script>
+      var num = document.getElementById('inpt')
+    </script>
+</body>
+
+</html>
